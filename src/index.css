@@ -8,58 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Kalaarpana Design System - Elegant & Artistic */
-    --background: 24 31% 97%;
-    --foreground: 27 15% 25%;
+    /* Kalaarpana Design System - Modern & Minimalist */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 27 15% 25%;
+    --card-foreground: 0 0% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 27 15% 25%;
+    --popover-foreground: 0 0% 9%;
 
-    /* Rich earthy primary with gold accents */
-    --primary: 27 42% 35%;
-    --primary-foreground: 45 100% 98%;
-    --primary-glow: 45 85% 75%;
+    /* Bold accent primary */
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 262 83% 70%;
 
-    /* Soft pastel secondary */
-    --secondary: 320 25% 92%;
-    --secondary-foreground: 27 42% 35%;
+    /* Clean gray secondary */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
 
-    /* Elegant muted tones */
-    --muted: 25 20% 95%;
-    --muted-foreground: 27 12% 55%;
+    /* Subtle gray tones */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Gold accent color */
-    --accent: 45 85% 75%;
-    --accent-foreground: 27 42% 35%;
+    /* Bold accent color */
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 25 15% 88%;
-    --input: 25 15% 92%;
-    --ring: 45 85% 75%;
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 262 83% 58%;
 
     /* Custom Kalaarpana colors */
-    --earth-primary: 27 42% 35%;
-    --earth-light: 27 25% 85%;
-    --gold: 45 85% 75%;
-    --gold-bright: 45 95% 65%;
-    --pastel-pink: 320 25% 92%;
-    --pastel-lavender: 265 20% 92%;
-    --sage: 120 15% 85%;
+    --earth-primary: 262 83% 58%;
+    --earth-light: 0 0% 96%;
+    --gold: 262 83% 58%;
+    --gold-bright: 262 83% 70%;
+    --pastel-pink: 0 0% 96%;
+    --pastel-lavender: 0 0% 94%;
+    --sage: 0 0% 94%;
 
-    /* Gradients for elegant effects */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--earth-primary)), hsl(var(--gold)));
-    --gradient-card: linear-gradient(180deg, hsl(var(--background)), hsl(var(--pastel-pink)));
-    --gradient-accent: linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-bright)));
+    /* Modern gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary-glow)));
 
-    /* Elegant shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--earth-primary) / 0.15);
-    --shadow-gold: 0 5px 20px -5px hsl(var(--gold) / 0.3);
-    --shadow-soft: 0 2px 10px -2px hsl(var(--earth-primary) / 0.1);
+    /* Clean shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.1);
+    --shadow-gold: 0 5px 20px -5px hsl(var(--primary) / 0.15);
+    --shadow-soft: 0 2px 10px -2px hsl(var(--primary) / 0.05);
 
     --radius: 0.5rem;
 
