@@ -8,33 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Kalaarpana Design System - Elegant & Artistic */
+    --background: 24 31% 97%;
+    --foreground: 27 15% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 27 15% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 27 15% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Rich earthy primary with gold accents */
+    --primary: 27 42% 35%;
+    --primary-foreground: 45 100% 98%;
+    --primary-glow: 45 85% 75%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Soft pastel secondary */
+    --secondary: 320 25% 92%;
+    --secondary-foreground: 27 42% 35%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Elegant muted tones */
+    --muted: 25 20% 95%;
+    --muted-foreground: 27 12% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Gold accent color */
+    --accent: 45 85% 75%;
+    --accent-foreground: 27 42% 35%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 25 15% 88%;
+    --input: 25 15% 92%;
+    --ring: 45 85% 75%;
+
+    /* Custom Kalaarpana colors */
+    --earth-primary: 27 42% 35%;
+    --earth-light: 27 25% 85%;
+    --gold: 45 85% 75%;
+    --gold-bright: 45 95% 65%;
+    --pastel-pink: 320 25% 92%;
+    --pastel-lavender: 265 20% 92%;
+    --sage: 120 15% 85%;
+
+    /* Gradients for elegant effects */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--earth-primary)), hsl(var(--gold)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--background)), hsl(var(--pastel-pink)));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-bright)));
+
+    /* Elegant shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--earth-primary) / 0.15);
+    --shadow-gold: 0 5px 20px -5px hsl(var(--gold) / 0.3);
+    --shadow-soft: 0 2px 10px -2px hsl(var(--earth-primary) / 0.1);
 
     --radius: 0.5rem;
 

@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'elegant': ['Playfair Display', 'serif'],
+				'clean': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -26,7 +30,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -52,6 +57,20 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Kalaarpana custom colors
+				earth: {
+					primary: 'hsl(var(--earth-primary))',
+					light: 'hsl(var(--earth-light))'
+				},
+				gold: {
+					DEFAULT: 'hsl(var(--gold))',
+					bright: 'hsl(var(--gold-bright))'
+				},
+				pastel: {
+					pink: 'hsl(var(--pastel-pink))',
+					lavender: 'hsl(var(--pastel-lavender))'
+				},
+				sage: 'hsl(var(--sage))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
