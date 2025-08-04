@@ -30,7 +30,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/93246a75-cb5f-49d2-a0e6-24723ee04c81.png" 
               alt="Kalaarpana Logo" 
-              className="h-10 w-auto"
+              className="h-10 w-10 rounded-full object-cover border-2 border-gold/30"
             />
             <div className="font-elegant text-2xl font-bold text-earth-primary">
               Kalaarpana
