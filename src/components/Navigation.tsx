@@ -26,8 +26,15 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="font-elegant text-2xl font-bold text-earth-primary">
-            Kalaarpana
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/93246a75-cb5f-49d2-a0e6-24723ee04c81.png" 
+              alt="Kalaarpana Logo" 
+              className="h-10 w-auto"
+            />
+            <div className="font-elegant text-2xl font-bold text-earth-primary">
+              Kalaarpana
+            </div>
           </div>
 
           {/* Desktop Navigation */}
