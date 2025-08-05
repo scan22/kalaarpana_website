@@ -1,36 +1,46 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
 const Services = () => {
   const services = [
     {
+      id: "photography",
       icon: "📸",
       title: "Photography",
       description: "Capture the most beautiful moments of your event through our professional, cinematic, and candid photography services."
     },
     {
+      id: "videography",
       icon: "🎥",
       title: "Videography", 
       description: "Relive your special day with high-definition, creatively edited videos that tell your story perfectly."
     },
     {
+      id: "event-decor",
       icon: "🌸",
       title: "Event Décor & Theme Setup",
       description: "Transform any space into a dream venue with customized themes, floral arrangements, lighting, and décor concepts tailored to your style."
     },
     {
+      id: "sound-system",
       icon: "🔊",
       title: "Professional Sound System",
       description: "Enjoy crystal-clear audio with our top-tier sound setup for every kind of event — from weddings to concerts."
     },
     {
+      id: "flute-concerts",
       icon: "🎶",
       title: "Live Flute Concerts by Gokula Dwani",
       description: "Add a soulful, divine touch to your event with live flute performances by the renowned Gokula Dwani."
     },
     {
+      id: "dance-choreography",
       icon: "💃",
       title: "Sangeet & Dance Choreography",
       description: "Make your celebrations more fun and memorable with expertly choreographed dance routines for all age groups."
     },
     {
+      id: "makeovers",
       icon: "💄",
       title: "Bridal & Non-Bridal Makeovers",
       description: "Look and feel your best with professional makeover services tailored to suit traditional and modern styles."
@@ -62,9 +72,24 @@ const Services = () => {
               <h3 className="font-elegant text-xl font-semibold text-earth-primary mb-4 group-hover:text-gold transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="font-clean text-muted-foreground leading-relaxed">
+              <p className="font-clean text-muted-foreground leading-relaxed mb-6">
                 {service.description}
               </p>
+              <div className="flex gap-3">
+                <Link to={`/services/${service.id}`}>
+                  <Button variant="outline" size="sm" className="font-clean group-hover:border-gold group-hover:text-gold transition-colors">
+                    View Details
+                  </Button>
+                </Link>
+                <Button 
+                  variant="hero" 
+                  size="sm" 
+                  className="font-clean"
+                  onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Book Now
+                </Button>
+              </div>
             </div>
           ))}
         </div>
