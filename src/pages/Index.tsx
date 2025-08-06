@@ -5,7 +5,7 @@ import Services from "@/components/Services";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
-import BookingForm from "@/components/BookingForm";
+
 
 const Index = () => {
   return (
@@ -34,10 +34,6 @@ const Index = () => {
       
       <div id="contact">
         <Contact />
-      </div>
-      
-      <div id="booking">
-        <BookingForm />
       </div>
       
       {/* Footer */}
