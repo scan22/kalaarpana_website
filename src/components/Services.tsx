@@ -4,16 +4,10 @@ import { Button } from "@/components/ui/button";
 const Services = () => {
   const services = [
     {
-      id: "photography",
-      icon: "📸",
-      title: "Photography",
-      description: "Capture the most beautiful moments of your event through our professional, cinematic, and candid photography services."
-    },
-    {
-      id: "videography",
-      icon: "🎥",
-      title: "Videography", 
-      description: "Relive your special day with high-definition, creatively edited videos that tell your story perfectly."
+      id: "photography-videography",
+      icon: "📸🎥",
+      title: "Photography & Videography",
+      description: "Capture and preserve your special moments with our combined photography and videography services - from beautiful photos to cinematic videos."
     },
     {
       id: "event-decor",
@@ -75,7 +69,7 @@ const Services = () => {
               <p className="font-clean text-muted-foreground leading-relaxed mb-6">
                 {service.description}
               </p>
-              <div className="flex gap-3">
+              <div className="flex gap-3 hidden">
                 <Link to={`/services/${service.id}`}>
                   <Button variant="outline" size="sm" className="font-clean group-hover:border-gold group-hover:text-gold transition-colors">
                     View Details

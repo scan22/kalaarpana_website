@@ -28,44 +28,12 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-xl">📍</span>
-                  </div>
-                  <div>
-                    <h4 className="font-clean font-semibold text-earth-primary">Location</h4>
-                    <p className="font-clean text-muted-foreground">Bangalore, India</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <span className="text-xl">📧</span>
                   </div>
                   <div>
                     <h4 className="font-clean font-semibold text-earth-primary">Email</h4>
-                    <p className="font-clean text-muted-foreground">info@kalaarpana.com</p>
+                    <p className="font-clean text-muted-foreground">kalaarpana.events@gmail.com</p>
                   </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-xl">📞</span>
-                  </div>
-                  <div>
-                    <h4 className="font-clean font-semibold text-earth-primary">Phone</h4>
-                    <p className="font-clean text-muted-foreground">+91-XXXXXXXXXX</p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Social Media */}
-              <div className="mt-8">
-                <h4 className="font-clean font-semibold text-earth-primary mb-4">Follow Us</h4>
-                <div className="flex space-x-4">
-                  {['📷 Instagram', '📘 Facebook', '🕊️ Twitter'].map((social, index) => (
-                    <Button key={index} variant="outline" size="sm" className="font-clean">
-                      {social}
-                    </Button>
-                  ))}
                 </div>
               </div>
             </div>

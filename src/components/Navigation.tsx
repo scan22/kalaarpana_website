@@ -48,7 +48,7 @@ const Navigation = () => {
                 {item.name}
               </button>
             ))}
-            <Button variant="elegant" size="sm">
+            <Button variant="elegant" size="sm" className="hidden">
               Get Quote
             </Button>
           </div>
@@ -81,7 +81,7 @@ const Navigation = () => {
                   {item.name}
                 </button>
               ))}
-              <Button variant="elegant" size="sm" className="mt-4 self-start">
+              <Button variant="elegant" size="sm" className="mt-4 self-start hidden">
                 Get Quote
               </Button>
             </div>

@@ -18,99 +18,58 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "photography",
-    icon: "📸",
-    title: "Photography",
-    description: "Capture the most beautiful moments of your event through our professional, cinematic, and candid photography services.",
-    detailedDescription: "Our photography services combine artistic vision with technical expertise to document your special moments. We use state-of-the-art equipment and creative techniques to capture the essence of your celebration, from intimate moments to grand celebrations.",
+    id: "photography-videography",
+    icon: "📸🎥",
+    title: "Photography & Videography",
+    description: "Capture and preserve your special moments with our combined photography and videography services - from beautiful photos to cinematic videos.",
+    detailedDescription: "Our comprehensive visual storytelling service combines the best of photography and videography. We capture both stunning still moments and dynamic video content to tell your complete story with artistic vision and technical expertise.",
     packages: [
       {
-        name: "Essential",
-        price: "₹25,000",
+        name: "Essential Combo",
+        price: "₹45,000",
         features: [
-          "4 hours coverage",
-          "1 photographer",
+          "6 hours coverage",
+          "1 photographer + 1 videographer",
           "200+ edited photos",
+          "3-5 minute highlight video",
           "Online gallery",
+          "HD video quality",
           "Basic editing"
         ]
       },
       {
-        name: "Premium",
-        price: "₹50,000",
+        name: "Premium Package",
+        price: "₹90,000",
         recommended: true,
         features: [
-          "8 hours coverage",
-          "2 photographers",
-          "400+ edited photos",
+          "Full day coverage",
+          "2 photographers + 2 videographers",
+          "500+ edited photos",
+          "Highlight reel + ceremony video",
           "Online gallery + USB",
+          "4K video quality",
           "Advanced editing",
           "Pre-event consultation"
         ]
       },
       {
-        name: "Luxury",
-        price: "₹80,000",
+        name: "Luxury Experience",
+        price: "₹1,50,000",
         features: [
-          "Full day coverage",
-          "3 photographers",
-          "600+ edited photos",
+          "Multi-day coverage",
+          "3 photographers + 3 videographers",
+          "800+ edited photos",
+          "Multiple video deliverables",
           "Premium album + USB",
+          "4K + slow motion",
           "Cinematic editing",
           "Same-day preview",
+          "Drone footage included",
           "Dedicated coordinator"
         ]
       }
     ],
-    addOns: ["Drone photography (+₹15,000)", "Additional photographer (+₹8,000)", "Premium album (+₹12,000)"],
-    galleryImages: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
-  },
-  {
-    id: "videography",
-    icon: "🎥",
-    title: "Videography",
-    description: "Relive your special day with high-definition, creatively edited videos that tell your story perfectly.",
-    detailedDescription: "Our videography team creates cinematic masterpieces that tell your unique story. From highlight reels to full ceremony coverage, we capture every emotion and detail with professional-grade equipment and creative storytelling techniques.",
-    packages: [
-      {
-        name: "Highlight Reel",
-        price: "₹35,000",
-        features: [
-          "6 hours coverage",
-          "1 videographer",
-          "3-5 minute highlight video",
-          "HD quality",
-          "Basic color grading"
-        ]
-      },
-      {
-        name: "Complete Story",
-        price: "₹65,000",
-        recommended: true,
-        features: [
-          "Full day coverage",
-          "2 videographers",
-          "Highlight reel + ceremony video",
-          "4K quality",
-          "Professional editing",
-          "Drone footage included"
-        ]
-      },
-      {
-        name: "Cinematic Experience",
-        price: "₹1,00,000",
-        features: [
-          "Multi-day coverage",
-          "3 videographers",
-          "Multiple video deliverables",
-          "4K + slow motion",
-          "Cinematic editing",
-          "Same-day edit",
-          "Multiple camera angles"
-        ]
-      }
-    ],
-    addOns: ["Drone videography (+₹20,000)", "Same-day edit (+₹15,000)", "Additional videographer (+₹12,000)"],
+    addOns: ["Drone photography & videography (+₹25,000)", "Additional team member (+₹10,000)", "Premium album (+₹12,000)", "Same-day edit (+₹15,000)"],
     galleryImages: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
   },
   {

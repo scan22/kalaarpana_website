@@ -27,10 +27,30 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4 h-auto">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="text-lg px-8 py-4 h-auto"
+              onClick={() => {
+                const element = document.querySelector('#services');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               Explore Our Services
             </Button>
-            <Button variant="elegant" size="lg" className="text-lg px-8 py-4 h-auto">
+            <Button 
+              variant="elegant" 
+              size="lg" 
+              className="text-lg px-8 py-4 h-auto"
+              onClick={() => {
+                const element = document.querySelector('#contact');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               Get in Touch
             </Button>
           </div>
