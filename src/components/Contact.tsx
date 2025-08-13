@@ -22,25 +22,25 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/submit", { // ✅ Match backend route
+      const res = await fetch("http://localhost:5000/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
-      })
-      ;
+      });
 
       const result = await res.json();
       console.log("Server response:", result);
-      alert(result.message || "No message returned from server");
+      alert(result.message || result.error || "Unknown error");
 
-
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
+      // Reset form on success
+      if (res.ok) {
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Failed to send message. Please try again.");
@@ -63,24 +63,18 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <div>
-              <h3 className="font-elegant text-2xl font-semibold text-earth-primary mb-6">
-                Get in Touch
-              </h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-xl">📧</span>
-                  </div>
-                  <div>
-                    <h4 className="font-clean font-semibold text-earth-primary">
-                      Email
-                    </h4>
-                    <p className="font-clean text-muted-foreground">
-                      kalaarpana.events@gmail.com
-                    </p>
-                  </div>
-                </div>
+            <h3 className="font-elegant text-2xl font-semibold text-earth-primary mb-6">
+              Get in Touch
+            </h3>
+            <div className="flex items-start space-x-4">
+              <div className="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center">
+                <span className="text-xl">📧</span>
+              </div>
+              <div>
+                <h4 className="font-clean font-semibold text-earth-primary">Email</h4>
+                <p className="font-clean text-muted-foreground">
+                  kalaarpana.events@gmail.com
+                </p>
               </div>
             </div>
           </div>
@@ -90,84 +84,54 @@ const Contact = () => {
             <h3 className="font-elegant text-2xl font-semibold text-earth-primary mb-6">
               Send us a Message
             </h3>
-
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label
-                    htmlFor="name"
-                    className="font-clean font-medium text-earth-primary"
-                  >
-                    Name
-                  </Label>
+                  <Label htmlFor="name">Name</Label>
                   <Input
                     id="name"
-                    placeholder="Your Name"
-                    className="font-clean"
                     value={formData.name}
                     onChange={handleChange}
+                    placeholder="Your Name"
                     required
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label
-                    htmlFor="email"
-                    className="font-clean font-medium text-earth-primary"
-                  >
-                    Email
-                  </Label>
+                  <Label htmlFor="email">Email</Label>
                   <Input
                     id="email"
                     type="email"
-                    placeholder="your@email.com"
-                    className="font-clean"
                     value={formData.email}
                     onChange={handleChange}
+                    placeholder="your@email.com"
                     required
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <Label
-                  htmlFor="subject"
-                  className="font-clean font-medium text-earth-primary"
-                >
-                  Subject
-                </Label>
+                <Label htmlFor="subject">Subject</Label>
                 <Input
                   id="subject"
-                  placeholder="Event Type or Service Needed"
-                  className="font-clean"
                   value={formData.subject}
                   onChange={handleChange}
+                  placeholder="Event Type or Service Needed"
                   required
                 />
               </div>
 
               <div className="space-y-2">
-                <Label
-                  htmlFor="message"
-                  className="font-clean font-medium text-earth-primary"
-                >
-                  Message
-                </Label>
+                <Label htmlFor="message">Message</Label>
                 <Textarea
                   id="message"
-                  placeholder="Tell us about your event vision..."
-                  className="font-clean min-h-[120px]"
                   value={formData.message}
                   onChange={handleChange}
+                  placeholder="Tell us about your event vision..."
                   required
                 />
               </div>
 
-              <Button
-                type="submit"
-                variant="hero"
-                size="lg"
-                className="w-full font-clean"
-              >
+              <Button type="submit" variant="hero" size="lg" className="w-full">
                 Send Message
               </Button>
             </form>
