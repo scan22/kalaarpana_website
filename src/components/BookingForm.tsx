@@ -64,7 +64,7 @@ const budgetRanges = [
 
 const serviceOptions = [
   "Photography",
-  "Videography",
+  //"Videography",
   "Event Décor & Theme Setup",
   "Professional Sound System",
   "Live Flute Concerts",

@@ -1,34 +1,37 @@
+import { useNavigate } from "react-router-dom";
+
 const Gallery = () => {
+  const navigate = useNavigate();
   const galleryItems = [
     {
-      id: 'photo-1465146344425-f00d5f5c8f07',
-      title: 'Wedding Setups',
-      category: 'Décor & Themes'
+      id: '/lovable-uploads/504bb46d-499a-4dae-ad1a-53d7e4387c9c.png',
+      title: 'Traditional Prayers',
+      category: 'Ceremonies'
     },
     {
-      id: 'photo-1472396961693-142e6e269027',
-      title: 'Couple Portraits',
-      category: 'Photography'
+      id: '/lovable-uploads/e103e0dd-bfa5-4979-b041-aedc03e619ac.png',
+      title: 'Cultural Rituals',
+      category: 'Ceremonies'
     },
     {
-      id: 'photo-1581090464777-f3220bbe1b8b',
-      title: 'Live Performances',
+      id: '/lovable-uploads/ef512d60-6d1c-4b18-ad18-bdc9b2fa6465.png',
+      title: 'Classical Violin',
       category: 'Entertainment'
     },
     {
-      id: 'photo-1500673922987-e212871fec22',
-      title: 'Ambient Lighting',
-      category: 'Décor & Themes'
-    },
-    {
-      id: 'photo-1485833077593-4278bba3f11f',
-      title: 'Nature Elegance',
+      id: '/lovable-uploads/2561a036-b0cd-4bf9-ba90-663c3932fdf4.png',
+      title: 'Family Moments',
       category: 'Photography'
     },
     {
-      id: 'photo-1470813740244-df37b8c1edcb',
-      title: 'Magical Moments',
-      category: 'Videography'
+      id: '/lovable-uploads/acc97e21-bb84-4b85-82c7-d44900834beb.png',
+      title: 'Classical Flute',
+      category: 'Entertainment'
+    },
+    {
+      id: '/lovable-uploads/16a94bef-20ef-4773-9320-4e73caa9037e.png',
+      title: 'Sacred Fire Ceremony',
+      category: 'Ceremonies'
     }
   ];
 
@@ -49,14 +52,15 @@ const Gallery = () => {
           {galleryItems.map((item, index) => (
             <div 
               key={index}
-              className="group relative overflow-hidden rounded-lg shadow-soft hover:shadow-elegant transition-all duration-300"
+              className="group relative overflow-hidden rounded-lg shadow-soft hover:shadow-elegant transition-all duration-300 cursor-pointer"
+              onClick={() => navigate('/gallery')}
             >
               <div className="aspect-video bg-gradient-to-br from-pastel-pink to-pastel-lavender flex items-center justify-center">
-                <img 
-                  src={`https://images.unsplash.com/${item.id}?w=600&h=400&fit=crop&crop=center`}
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                    <img 
+                      src={item.id}
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
               </div>
               
               {/* Overlay */}

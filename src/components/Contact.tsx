@@ -1,52 +1,9 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    try {
-      const res = await fetch("http://localhost:5000/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await res.json();
-      console.log("Server response:", result);
-      alert(result.message || result.error || "Unknown error");
-
-      // Reset form on success
-      if (res.ok) {
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Failed to send message. Please try again.");
-    }
-  };
-
   return (
     <section className="py-20 bg-gradient-to-b from-pastel-lavender/20 to-background">
       <div className="container mx-auto px-6">
@@ -63,18 +20,21 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <h3 className="font-elegant text-2xl font-semibold text-earth-primary mb-6">
-              Get in Touch
-            </h3>
-            <div className="flex items-start space-x-4">
-              <div className="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center">
-                <span className="text-xl">📧</span>
-              </div>
-              <div>
-                <h4 className="font-clean font-semibold text-earth-primary">Email</h4>
-                <p className="font-clean text-muted-foreground">
-                  kalaarpana.events@gmail.com
-                </p>
+            <div>
+              <h3 className="font-elegant text-2xl font-semibold text-earth-primary mb-6">
+                Get in Touch
+              </h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-xl">📧</span>
+                  </div>
+                  <div>
+                    <h4 className="font-clean font-semibold text-earth-primary">Email</h4>
+                    <p className="font-clean text-muted-foreground">kalaarpana.events@gmail.com</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -84,54 +44,34 @@ const Contact = () => {
             <h3 className="font-elegant text-2xl font-semibold text-earth-primary mb-6">
               Send us a Message
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            
+            <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your Name"
-                    required
-                  />
+                  <Label htmlFor="name" className="font-clean font-medium text-earth-primary">Name</Label>
+                  <Input id="name" placeholder="Your Name" className="font-clean" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="your@email.com"
-                    required
-                  />
+                  <Label htmlFor="email" className="font-clean font-medium text-earth-primary">Email</Label>
+                  <Input id="email" type="email" placeholder="your@email.com" className="font-clean" />
                 </div>
               </div>
-
+              
               <div className="space-y-2">
-                <Label htmlFor="subject">Subject</Label>
-                <Input
-                  id="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="Event Type or Service Needed"
-                  required
-                />
+                <Label htmlFor="subject" className="font-clean font-medium text-earth-primary">Subject</Label>
+                <Input id="subject" placeholder="Event Type or Service Needed" className="font-clean" />
               </div>
-
+              
               <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
-                <Textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={handleChange}
+                <Label htmlFor="message" className="font-clean font-medium text-earth-primary">Message</Label>
+                <Textarea 
+                  id="message" 
                   placeholder="Tell us about your event vision..."
-                  required
+                  className="font-clean min-h-[120px]"
                 />
               </div>
-
-              <Button type="submit" variant="hero" size="lg" className="w-full">
+              
+              <Button variant="hero" size="lg" className="w-full font-clean">
                 Send Message
               </Button>
             </form>
