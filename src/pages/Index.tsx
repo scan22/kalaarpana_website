@@ -46,7 +46,7 @@ const Index = () => {
             Creating magical moments, one celebration at a time.
           </p>
           <p className="font-clean text-sm text-white/60">
-            © 2024 Kalaarpana. All rights reserved.
+            © 2025 Kalaarpana. All rights reserved.
           </p>
         </div>
       </footer>
