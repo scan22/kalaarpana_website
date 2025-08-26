@@ -123,6 +123,10 @@ const GalleryPage = () => {
                     src={image.id}
                     alt={image.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      console.error('Image failed to load:', image.id);
+                      e.currentTarget.style.display = 'none';
+                    }}
                   />
                 </div>
                 
